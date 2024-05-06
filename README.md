@@ -234,6 +234,6 @@ Responses
 
 > Transaction Status ID
 >
-> 1 = Belum Dibayar
-> 2 = Dibayar
-> 3 = Dibatalkan
+> 1 = Not Paid
+> 2 = Paid
+> 3 = Cancel
