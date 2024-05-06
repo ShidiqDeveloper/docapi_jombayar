@@ -237,3 +237,5 @@ Responses
 > 1 = Not Paid
 > 2 = Paid
 > 3 = Cancel
+> 
+> Transaction time using timestamp format
