@@ -177,3 +177,63 @@ Responses
   ]
 }
 ```
+
+# Topup API
+URL : POST <base_url>/api/student/{hash_uid}/topup
+
+Headers :
+- Authorization : Bearer <token>
+
+Payload
+- amount (decimal)
+
+Responses
+```
+{
+  "status": true,
+  "status_code": 200,
+  "message": "Success!",
+  "data": {
+    "payment_url": "string",
+    "transaction_id": "string"
+  }
+}
+```
+
+# Check Status Payment Topup API
+URL : GET <base_url>/api/topup/{transaction_id}
+
+Headers :
+- Authorization : Bearer <token>
+
+Responses
+```
+{
+  "status": true,
+  "status_code": 200,
+  "message": "Success!",
+  "data": {
+    "transaction_id": "string",
+    "transaction_time": "integer",
+    "transaction_amount": "decimal",
+    "transaction_status": {
+      "id": "integer",
+      "transaction_status": "string"
+    },
+    "student": {
+      "hash_uid": "string",
+      "student_name": "string",
+      "student_number_id": "string"
+    },
+    "payment_gateway_attribute": {
+      "payment_url": "string"
+    }
+  }
+}
+```
+
+> Transaction Status ID
+>
+> 1 = Belum Dibayar
+> 2 = Dibayar
+> 3 = Dibatalkan
