@@ -216,6 +216,7 @@ Responses
     "transaction_id": "string",
     "transaction_time": "integer",
     "transaction_amount": "decimal",
+    "grant_total": "decimal",
     "transaction_status": {
       "id": "integer",
       "transaction_status": "string"
