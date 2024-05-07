@@ -83,7 +83,7 @@ Response
 # Get card related
 URL : GET <base_url>/api/cards
 Header : 
-- Authorization : Bearer <token>
+- Authorization : Bearer {token}
 
 Response
 ```
@@ -117,7 +117,7 @@ Response
 # Get Card
 URL : GET <base_url>/api/cards/{hash_id / isi NFC Card}
 Header : 
-- Authorization : Bearer <token>
+- Authorization : Bearer {token}
 
 Response 
 ```
@@ -141,7 +141,7 @@ Query String
 - limit (Opsional, Default 10)
 
 Header
-- Authorization : Bearer <token>
+- Authorization : Bearer {token}
 
 Responses
 ```
@@ -182,7 +182,7 @@ Responses
 URL : POST <base_url>/api/student/{hash_uid}/topup
 
 Headers :
-- Authorization : Bearer <token>
+- Authorization : Bearer {token}
 
 Payload
 - amount (decimal)
@@ -204,7 +204,7 @@ Responses
 URL : GET <base_url>/api/topup/{transaction_id}
 
 Headers :
-- Authorization : Bearer <token>
+- Authorization : Bearer {token}
 
 Responses
 ```
@@ -240,3 +240,35 @@ Responses
 > 3 = Cancel
 > 
 > Transaction time using timestamp format
+
+# Get Profile
+URL : GET <base_url>/api/profile
+
+Headers : 
+- Authorization : Bearer {token}
+
+Response
+```
+{
+  "status": true,
+  "status_code": 200,
+  "message": "Success!",
+  "data": {
+    "parent_name": "string",
+    "parent_email": "string",
+    "parent_phone": "string",
+    "parent_address": "string
+  }
+}
+```
+
+# Update Profile
+URL : PUT <base_url>/api/profile
+
+Headers : 
+- Authorization : Bearer {token}
+
+Payload
+- parent_name (required, string)
+- parent_phone (required, string)
+- parent_address (required, string)
