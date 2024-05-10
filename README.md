@@ -58,7 +58,7 @@ Response
   "status_code": 200,
   "message": "Success send link OTP!",
   "data": {
-    "hash_uid": "string",
+    "id": "string" (id dari users),
     "email": "string",
   }
 }
@@ -68,7 +68,7 @@ Response
 URL : POST <base_url>/api/check-token-reset-password
 
 Payload 
-- hash_uid
+- (id dari users)
 - otp
 
 ```
@@ -77,7 +77,7 @@ Payload
   "status_code": 200,
   "message": "Token is valid!",
   "data": {
-    "hash_uid": "string",
+    "id": "string" (id dari users),
     "email": "string",
   }
 }
@@ -88,7 +88,7 @@ Payload
 URL : POST <base_url>/api/reset-password
 
 Payload:
-- hash_uid
+- id (id dari users)
 - password
 - password_confirmation
 - otp
@@ -131,7 +131,7 @@ Response
 URL : <base_url>/api/check-token-register
 
 Payload :
-- hash_uid
+- id (id dari users)
 - token
 
 Response
