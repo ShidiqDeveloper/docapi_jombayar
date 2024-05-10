@@ -13,11 +13,14 @@ Error Validation
 Header response code 422
 ```
 {
-  "email": [
-    "Email is required"
-  ],
-  "password": [
-    "Password is required"
+  "message": "string",
+  "data": [
+    "email": [
+      "Email is required"
+    ],
+    "password": [
+      "Password is required"
+    ]
   ]
 }
 ```
@@ -54,6 +57,47 @@ Response
   "status": true,
   "status_code": 200,
   "message": "Success send link OTP!",
+  "data": {
+    "hash_uid": "string",
+    "email": "string",
+  }
+}
+```
+
+# Check token reset password
+URL : POST <base_url>/api/check-token-reset-password
+
+Payload 
+- hash_uid
+- otp
+
+```
+{
+  "status": true,
+  "status_code": 200,
+  "message": "Token is valid!",
+  "data": {
+    "hash_uid": "string",
+    "email": "string",
+  }
+}
+```
+
+
+# Reset Password
+URL : POST <base_url>/api/reset-password
+
+Payload:
+- hash_uid
+- password
+- password_confirmation
+- otp
+
+```
+{
+  "status": true,
+  "status_code": 200,
+  "message": "Success reset password!",
   "data": []
 }
 ```
@@ -76,9 +120,30 @@ Response
   "status": true,
   "status_code": 200,
   "message": "Success reset register! Please check your email for verify your account!",
+  "data": {
+    "hash_uid": "string",
+    "email": "string"
+  }
+}
+```
+
+# Send OTP Register
+URL : <base_url>/api/check-token-register
+
+Payload :
+- hash_uid
+- token
+
+Response
+```
+{
+  "status": true,
+  "status_code": 200,
+  "message": "Success verify your account",
   "data": []
 }
 ```
+
 
 # Get card related
 URL : GET <base_url>/api/cards
