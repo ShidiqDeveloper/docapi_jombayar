@@ -259,8 +259,7 @@ Responses
   "status_code": 200,
   "message": "Success!",
   "data": {
-    "payment_url": "string",
-    "transaction_id": "string"
+    "transaction_number": "string" 
   }
 }
 ```
