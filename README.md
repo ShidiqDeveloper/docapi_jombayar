@@ -346,3 +346,46 @@ Response
   "data": []
 }
 ```
+
+# Receive transaction
+URL : POST base_url/api/pos/transactions
+
+Payload : 
+```
+{
+  "api_key": "string",
+  "merchant_code": base64_encode(merchant_code),
+  "transaction_amount": "string",
+  "transaction_discount": "string",
+  "items": [
+    {
+      "name": "string",
+      "qty": "string",
+      "price": "string"
+    },
+    {
+      "name": "string",
+      "qty": "string",
+      "price": "string"
+    },
+  ]
+}
+```
+Response Success
+```
+{
+  "status": true,
+  "status_code": 200,
+  "message": "Success store transactions!",
+  "data": []
+}
+```
+Response Fails
+```
+{
+  "status": true,
+  "status_code": 403,
+  "message": "Insufficient student balance!",
+  "data": []
+}
+```
