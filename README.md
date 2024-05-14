@@ -377,7 +377,10 @@ Response Success
   "status": true,
   "status_code": 200,
   "message": "Success store transactions!",
-  "data": []
+  "data": {
+    "transaction_hash_id" => "string",
+    "transaction_number" => "string"
+  }
 }
 ```
 Response Fails
