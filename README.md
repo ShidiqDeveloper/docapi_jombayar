@@ -350,11 +350,13 @@ Response
 # Receive transaction
 URL : POST base_url/api/pos/transactions
 
+Header: 
+- Api-key: string
+- Authorization: base64_encode(merchant_code)
+
 Payload : 
 ```
 {
-  "api_key": "string",
-  "merchant_code": base64_encode(merchant_code),
   "transaction_amount": "string",
   "transaction_discount": "string",
   "items": [
@@ -397,7 +399,7 @@ Response Fails
 URL : GET base_url/api/pos/merchants/balance
 
 Header :
-- api_key: string
+- Api-key: string
 - Authorization: base64_encode(merchand_code)
 
 Response : 
@@ -416,7 +418,7 @@ Response :
 URL : GET base_url/api/pos/merchants/withdraws
 
 Header :
-- api_key: string
+- Api-key: string
 - Authorization: base64_encode(merchand_code)
 
 Response : 
@@ -444,7 +446,7 @@ Response :
 URL: POST base_url/api/pos/merchants/balance
 
 Header :
-- api_key: string
+- Api-key: string
 - Authorization: base64_encode(merchand_code)
 
 Payload : 
