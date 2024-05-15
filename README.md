@@ -392,3 +392,79 @@ Response Fails
   "data": []
 }
 ```
+
+# Get balance merchants
+URL : GET base_url/api/pos/merchants/balance
+
+Header :
+- api_key: string
+- Authorization: base64_encode(merchand_code)
+
+Response : 
+```
+{
+  "status": true,
+  "status_code": 200,
+  "message": "Found!",
+  "data": {
+    "merchant_balance": "string"
+  }
+}
+```
+
+# Get list withdraw
+URL : GET base_url/api/pos/merchants/withdraws
+
+Header :
+- api_key: string
+- Authorization: base64_encode(merchand_code)
+
+Response : 
+```
+{
+  "status": true,
+  "status_code": 200,
+  "message": "Found!",
+  "data": [
+    {
+      "withdraw_uid": "string",
+      "withdraw_number": "string",
+      "withdraw_time": "string",
+      "withdraw_amount": "string",
+      "status": {
+        "id": "string",
+        "merchant_withdraw_status": "string"
+      },
+    }
+  ]
+}
+```
+
+# Request withdraw
+URL: POST base_url/api/pos/merchants/balance
+
+Header :
+- api_key: string
+- Authorization: base64_encode(merchand_code)
+
+Payload : 
+- amount: "string"
+
+Response : 
+```
+{
+  "status": true,
+  "status_code": 200,
+  "message": "Found!",
+  "data": {
+    "withdraw_hash_uid": "string",
+    "withdraw_number": "string",
+    "withdraw_time": "string",
+    "withdraw_amount": "string",
+    "status": {
+      "id": "string",
+      "merchant_withdraw_status": "string"
+    },
+  }
+}
+```
