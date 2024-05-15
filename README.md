@@ -434,7 +434,6 @@ Response :
       "withdraw_time": "string",
       "withdraw_amount": "string",
       "status": {
-        "id": "string",
         "merchant_withdraw_status": "string"
       },
     }
