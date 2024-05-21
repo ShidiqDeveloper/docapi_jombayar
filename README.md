@@ -194,7 +194,10 @@ Response
     "hash_uid": "string",
     "student_name": "string",
     "student_number_id": "string",
-    "student_balance": 0
+    "student_balance": 0,
+    "student_email": "string",
+    "student_phone": "string",
+    "student_address": "string",
   }
 }
 ```
@@ -466,6 +469,32 @@ Response :
       "id": "string",
       "merchant_withdraw_status": "string"
     },
+  }
+}
+```
+
+
+# Get card info for POS
+URL : GET base_url/api/pos/cards/{hash_id}
+
+Header
+- Api-key: string
+- Authorization: base64_encode(merchant_code)
+
+Response
+```
+{
+  "status": true,
+  "status_code": 200,
+  "message": "Found!",
+  "data": {
+    "hash_uid": "string",
+    "student_name": "string",
+    "student_number_id": "string",
+    "student_balance": 0,
+    "student_email": "string",
+    "student_phone": "string",
+    "student_address": "string",
   }
 }
 ```
