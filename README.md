@@ -500,7 +500,7 @@ Response
 ```
 
 # Store token device firebase
-URL : GET base_url/api/pos/token-firebase
+URL : POST base_url/api/pos/token-firebase
 
 Header
 - Api-key: string
