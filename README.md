@@ -518,3 +518,23 @@ Response
   "data": []
 }
 ```
+
+# Delete token device firebase
+URL : DELETE base_url/api/pos/token-firebase
+
+Header
+- Api-key: string
+- Authorization: base64_encode(merchant_code)
+
+Payload
+- token
+
+Response
+```
+{
+  "status": true,
+  "status_code": 200,
+  "message": "Success destroy token!",
+  "data": []
+}
+```
