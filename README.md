@@ -201,8 +201,82 @@ Response
   }
 }
 ```
-
 # Get transactions
+URL : GET base_url/api/transactions?lmit=1
+
+Query String
+- limit (Optional, default 10)
+
+Header
+- Authorization : Bearer {token}
+
+Response
+```
+{
+  "status": true,
+  "status_code": 200,
+  "message": "Found!",
+  "data": [
+    {
+      "hash_uid": "string",
+      "transaction_time": "integer timestamp",
+      "grand_total": "integer",
+      "merchant": {
+        "merchant_name": "string",
+        "merchant_code": "string"
+      },
+      "student": {
+        "hash_uid": "string",
+        "student_name": "string",
+        "student_number_id": "string",
+        "student_balance": 0,
+        "student_email": "string",
+        "student_phone": "string",
+        "student_address": "string",
+      }
+    },
+    {
+      "hash_uid": "string",
+      "transaction_time": "integer timestamp",
+      "grand_total": "integer",
+      "merchant": {
+        "merchant_name": "string",
+        "merchant_code": "string"
+      },
+      "student": {
+        "hash_uid": "string",
+        "student_name": "string",
+        "student_number_id": "string",
+        "student_balance": 0,
+        "student_email": "string",
+        "student_phone": "string",
+        "student_address": "string",
+      }
+    },
+    {
+      "hash_uid": "string",
+      "transaction_time": "integer timestamp",
+      "grand_total": "integer",
+      "merchant": {
+        "merchant_name": "string",
+        "merchant_code": "string"
+      },
+      "student": {
+        "hash_uid": "string",
+        "student_name": "string",
+        "student_number_id": "string",
+        "student_balance": 0,
+        "student_email": "string",
+        "student_phone": "string",
+        "student_address": "string",
+      }
+    },
+  ]
+}
+```
+
+
+# Get transactions some students
 URL : GET <bsae_url>/api/card/{hash_uid}/transctions?iimit=10
 
 Query String
@@ -223,7 +297,8 @@ Responses
       "transaction_time": "integer timestamp",
       "grand_total": "integer",
       "merchant": {
-        "merchant_name": "string"
+        "merchant_name": "string",
+        "merchant_code": "string"
       }
     },
     {
@@ -231,7 +306,8 @@ Responses
       "transaction_time": "integer timestamp",
       "grand_total": "integer",
       "merchant": {
-        "merchant_name": "string"
+        "merchant_name": "string",
+        "merchant_code": "string"
       }
     },
     {
@@ -239,7 +315,8 @@ Responses
       "transaction_time": "integer timestamp",
       "grand_total": "integer",
       "merchant": {
-        "merchant_name": "string"
+        "merchant_name": "string",
+        "merchant_code": "string"
       }
     },
   ]
